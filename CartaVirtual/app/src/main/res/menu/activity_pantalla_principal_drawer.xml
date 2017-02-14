@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="Ubicacion" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_class_black_24dp"
+            android:title="Menu" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="Reserva" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Ayuda" />
+    </group>
+
+    <item android:title="Contáctanos">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="TripAdvisor" />
+            <item
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="Facebook" />
+
+            <item
+                android:id="@+id/nav_youtube"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="YouTube" />
+        </menu>
+    </item>
+
+</menu>
+

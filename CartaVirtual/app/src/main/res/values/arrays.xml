@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipoDocumento">
+        <item>Cédula de ciudadanía</item>
+        <item>Cédula de Extranjería</item>
+        <item>Tarjeta de Identidad</item>
+        <item>Pasaporte</item>
+        <item>Otro</item>
+
+    </string-array>
+</resources>
