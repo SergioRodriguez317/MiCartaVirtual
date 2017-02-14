@@ -38,7 +38,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(6.2,-75.5),5));
+
         // Add a marker in Sydney and move the camera
         LatLng medellin = new LatLng(6.2, -76);
         LatLng medellin2 = new LatLng(6.2, -75);
@@ -46,8 +46,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(medellin).title("Marker in Medellin"));
         mMap.addMarker(new MarkerOptions().position(medellin2).title("Marker in Medellin"));
         mMap.addMarker(new MarkerOptions().position(medellin3).title("Marker in Medellin"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin2));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin3));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(medellin,6));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(medellin2,6));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(medellin3,6));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin2));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(medellin3));
     }
 }
