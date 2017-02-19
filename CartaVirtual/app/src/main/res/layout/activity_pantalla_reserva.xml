@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText5"
+        android:id="@+id/numeroDocumento"
         android:text="Número de documento"
         android:textSize="14sp"
         android:textAlignment="textStart"
@@ -80,8 +80,8 @@
         android:textSize="18sp"
         android:textStyle="normal|bold"
         android:textAlignment="center"
-        android:layout_alignBaseline="@+id/editText6"
-        android:layout_alignBottom="@+id/editText6"
+        android:layout_alignBaseline="@+id/telefono"
+        android:layout_alignBottom="@+id/telefono"
         android:layout_toStartOf="@+id/texto_Nombre"
         android:fontFamily="sans-serif-smallcaps" />
 
@@ -90,17 +90,17 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText6"
+        android:id="@+id/telefono"
         android:text="Teléfono"
-        android:layout_below="@+id/editText5"
-        android:layout_alignStart="@+id/editText5"
+        android:layout_below="@+id/numeroDocumento"
+        android:layout_alignStart="@+id/numeroDocumento"
         android:textSize="14sp" />
 
     <TextView
         android:text="Fecha y Hora de Reserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText6"
+        android:layout_below="@+id/telefono"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:id="@+id/textView35"
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/editText7"
+        android:id="@+id/fechaReserva"
         android:text="Fecha (DD/MM/AA)"
         android:textSize="14sp"
         android:layout_centerVertical="true"
@@ -125,12 +125,12 @@
         android:layout_height="wrap_content"
         android:inputType="time"
         android:ems="10"
-        android:id="@+id/editText8"
+        android:id="@+id/horaReserva"
         android:layout_marginStart="43dp"
         android:text="Hora (hh:mm)"
         android:textSize="14sp"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/editText7" />
+        android:layout_toEndOf="@+id/fechaReserva" />
 
     <TextView
         android:text="Cantidad de personas"
@@ -141,17 +141,9 @@
         android:textSize="18sp"
         android:textStyle="normal|bold"
         android:textAlignment="center"
-        android:layout_below="@+id/editText7"
+        android:layout_below="@+id/fechaReserva"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-smallcaps" />
-
-    <NumberPicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:id="@+id/cantidad_personas"
-        android:layout_below="@+id/textView36"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="CONFIRMAR"
@@ -164,7 +156,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="22dp"
-        android:onClick="OnClickConfirmar" />
+        android:onClick="OnClickBotonConfirmacion" />
 
     <Button
         android:layout_width="wrap_content"
@@ -172,6 +164,19 @@
         android:id="@+id/botonSalir"
         android:drawableLeft="@drawable/ic_clear_black_24dp"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView35" />
+        android:layout_toStartOf="@+id/textView35"
+        android:onClick="OnClickBotonSalir" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="14dp"
+        android:id="@+id/cantidadPersonas"
+        android:text="Cantidad de personas"
+        android:textAlignment="center"
+        android:layout_below="@+id/textView36"
+        android:layout_toEndOf="@+id/botonSalir" />
 
 </RelativeLayout>

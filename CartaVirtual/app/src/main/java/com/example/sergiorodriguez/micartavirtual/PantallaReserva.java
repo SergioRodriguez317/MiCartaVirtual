@@ -1,7 +1,9 @@
 package com.example.sergiorodriguez.micartavirtual;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -19,5 +21,13 @@ public class PantallaReserva extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Le indicamos al spinner el adaptador a usar
         prueba.setAdapter(adapter);
+    }
+    public void OnClickBotonConfirmacion(View v){
+        Intent intencion=new Intent(getApplicationContext(),PantallaConfirmacion.class);
+        startActivity(intencion);
+    }
+    public void OnClickBotonSalir(View v){
+        Intent intencion=new Intent(getApplicationContext(),PantallaPrincipal.class);
+        startActivity(intencion);
     }
 }
