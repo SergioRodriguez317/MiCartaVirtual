@@ -24,14 +24,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Nombre"
+        android:inputType="text"
         android:ems="10"
         android:id="@+id/texto_Nombre"
         android:textSize="14sp"
         android:textAlignment="center"
         android:layout_below="@+id/textView32"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:hint="Nombre" />
 
     <TextView
         android:text="Tipo y Número de documento"
@@ -62,15 +62,15 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="text"
         android:ems="10"
         android:id="@+id/numeroDocumento"
-        android:text="Número de documento"
         android:textSize="14sp"
         android:textAlignment="textStart"
         android:layout_below="@+id/tipoDocumento"
         android:layout_alignStart="@+id/textView32"
-        android:layout_marginStart="15dp" />
+        android:layout_marginStart="15dp"
+        android:hint="Numero de documento" />
 
     <TextView
         android:text="Teléfono"
@@ -88,13 +88,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="phone"
         android:ems="10"
         android:id="@+id/telefono"
-        android:text="Teléfono"
         android:layout_below="@+id/numeroDocumento"
         android:layout_alignStart="@+id/numeroDocumento"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:hint="Telefono"
+        android:inputType="text" />
 
     <TextView
         android:text="Fecha y Hora de Reserva"
@@ -111,26 +111,14 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="date"
         android:ems="10"
         android:id="@+id/fechaReserva"
-        android:text="Fecha (DD/MM/AA)"
         android:textSize="14sp"
         android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:textAlignment="center" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="time"
-        android:ems="10"
-        android:id="@+id/horaReserva"
-        android:layout_marginStart="43dp"
-        android:text="Hora (hh:mm)"
-        android:textSize="14sp"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/fechaReserva" />
+        android:textAlignment="center"
+        android:hint="Fecha (DD/MM/AA)"
+        android:inputType="text" />
 
     <TextView
         android:text="Cantidad de personas"
@@ -170,13 +158,24 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:ems="10"
         android:layout_marginTop="14dp"
         android:id="@+id/cantidadPersonas"
-        android:text="Cantidad de personas"
         android:textAlignment="center"
         android:layout_below="@+id/textView36"
-        android:layout_toEndOf="@+id/botonSalir" />
+        android:layout_toEndOf="@+id/botonSalir"
+        android:hint="Cantidad de personas"
+        android:inputType="text" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/horaReserva"
+        android:textSize="14sp"
+        android:hint="Hora (hh:mm)"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="text" />
 
 </RelativeLayout>
