@@ -22,12 +22,13 @@ public class PantallaReserva extends AppCompatActivity {
         //Le indicamos al spinner el adaptador a usar
         prueba.setAdapter(adapter);
     }
-    public void OnClickBotonConfirmacion(View v){
-        Intent intencion=new Intent(getApplicationContext(),PantallaConfirmacion.class);
-        startActivity(intencion);
-    }
+
     public void OnClickBotonSalir(View v){
         Intent intencion=new Intent(getApplicationContext(),PantallaPrincipal.class);
+        startActivity(intencion);
+    }
+    public void OnClickBotonConfirmar(View v){
+        Intent intencion=new Intent(getApplicationContext(),PantallaConfirmacion.class);
         startActivity(intencion);
     }
 }

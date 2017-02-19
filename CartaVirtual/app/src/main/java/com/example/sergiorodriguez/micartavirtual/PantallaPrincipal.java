@@ -1,10 +1,12 @@
 package com.example.sergiorodriguez.micartavirtual;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import static com.example.sergiorodriguez.micartavirtual.R.id.telefono;
 
 public class PantallaPrincipal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,14 +29,14 @@ public class PantallaPrincipal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -44,17 +48,27 @@ public class PantallaPrincipal extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    public void OnClickBotonMenu(View v){
-        Intent intencion=new Intent(getApplicationContext(),PantallaMenu.class);
+    public void OnClickBotonMenu(View v) {
+        Intent intencion = new Intent(getApplicationContext(), PantallaMenu.class);
         startActivity(intencion);
     }
-    public void OnClickBotonUbicacion(View v){
-        Intent intencion=new Intent(getApplicationContext(),MapsActivity.class);
+
+    public void OnClickBotonUbicacion(View v) {
+        Intent intencion = new Intent(getApplicationContext(), MapsActivity.class);
         startActivity(intencion);
     }
-    public void OnClickBotonReserva(View v){
-        Intent intencion=new Intent(getApplicationContext(),PantallaReserva.class);
+
+    public void OnClickBotonReserva(View v) {
+        Intent intencion = new Intent(getApplicationContext(), PantallaReserva.class);
         startActivity(intencion);
+    }
+
+    public void OnClickLlamar(View v) {
+        // Intent i = new Intent(android.content.Intent.ACTION_CALL,
+        // Uri.parse("tel:+3748593458"));
+        Intent i = new Intent(android.content.Intent.ACTION_DIAL,
+                Uri.parse("tel:+570000000")); //
+        startActivity(i);
     }
 
     @Override

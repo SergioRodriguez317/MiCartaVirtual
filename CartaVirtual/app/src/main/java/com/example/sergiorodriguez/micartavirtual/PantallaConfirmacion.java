@@ -28,4 +28,5 @@ public class PantallaConfirmacion extends AppCompatActivity {
     public void OnClickBotonSalir(View v){
         System.exit(0);
     }
+
 }
