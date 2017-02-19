@@ -28,16 +28,7 @@ public class PantallaPrincipal extends AppCompatActivity
         setContentView(R.layout.activity_pantalla_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
+        
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -67,7 +58,7 @@ public class PantallaPrincipal extends AppCompatActivity
         // Intent i = new Intent(android.content.Intent.ACTION_CALL,
         // Uri.parse("tel:+3748593458"));
         Intent i = new Intent(android.content.Intent.ACTION_DIAL,
-                Uri.parse("tel:+570000000")); //
+                Uri.parse("tel:+571234567")); //Se pone el teléfono al que se va a llamar
         startActivity(i);
     }
 
